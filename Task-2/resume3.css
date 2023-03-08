@@ -1,0 +1,1628 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffd9fc;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+nav {
+    display: flex;
+    padding: 15px;
+    background-color: #fdbdbd;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 120;
+    opacity: 0;
+    animation: nav 5s ease forwards;
+    position: fixed;
+    margin: 0 auto;
+    border-bottom: 3px solid #ffffff;
+}
+
+@keyframes nav {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+nav .logo {
+    margin-left: 15px;
+    display: flex;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 90px;
+    margin-left: 6px;
+}
+
+nav .menu {
+    text-align: center;
+    justify-content: center;
+}
+
+nav .menu .menu-item {
+    font-size: 1.5rem;
+    font-family: system-ui;
+    margin-right: 15px;
+    font-weight: 400;
+    color: #0c133f;
+}
+
+nav .menu .menu-item:hover {
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+nav .menu .menu-item:nth-child(1):hover {
+    color: red;
+}
+
+nav .menu .menu-item:nth-child(2):hover {
+    color: #ff7300;
+}
+
+nav .menu .menu-item:nth-child(3):hover {
+    color: yellow;
+}
+
+nav .menu .menu-item:nth-child(4):hover {
+    color: green;
+}
+
+nav .menu .menu-item:nth-child(5):hover {
+    color: blue;
+}
+
+nav .menu .menu-item:nth-child(6):hover {
+    color: indigo;
+}
+
+nav .menu .menu-item:nth-child(7):hover {
+    color: violet;
+}
+
+#hero {
+    /* height: 100vh; */
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#hero .container .left {
+    flex: 6;
+}
+
+#hero .container .right {
+    flex: 7;
+}
+
+#hero .container .left .subheading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    overflow: hidden;
+    opacity: 0;
+    animation: text 3s ease-in-out forwards;
+    color: #5924ed;
+    animation-delay: 1s;
+    font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#hero .container .left .heading {
+    font-size: 5rem;
+    font-weight: 900;
+    display: inline-block;
+}
+
+#hero .container .left .heading .wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
+#hero .container .left .heading .wrapper span {
+    position: relative;
+    animation: head 1s ease-in-out forwards;
+    bottom: -100px;
+    animation-delay: 2s;
+}
+
+@keyframes head {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+#hero .container .left .heading .wrapper:nth-child(1) {
+    color: #000;
+    font-size: 4rem;
+}
+
+#hero .container .left .heading .wrapper:nth-child(2) {
+    color: red;
+}
+
+#hero .container .left .desc {
+    max-width: 500px;
+    font-size: 1.4rem;
+    animation: text 1s ease-in-out forwards;
+    color: #55555a;
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+#hero .container .left .thank,
+#hero .container .left .button {
+    display: inline-block;
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: text 1s ease-in-out forwards;
+    animation-delay: 3.5s;
+}
+
+#hero .container .right {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    right: -600px;
+    opacity: 0;
+    overflow: hidden;
+    animation: image 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes image {
+    0% {
+        position: relative;
+        right: -600px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+#hero .container .right img {
+    width: 100%;
+    height: 600px;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 12px;
+    /* margin-left: 15px; */
+}
+
+#hero .container .left .button {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#hero .container .left .button .primary-btn {
+    display: inline-block;
+    padding: 0.6em 1.1em;
+    background-color: #5924ed;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.4rem;
+}
+
+#hero .container .left .button .fa-solid {
+    font-size: 3rem;
+    color: #5924ed;
+}
+
+/* skill section start */
+
+#skills {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8rem;
+    align-items: center;
+    padding-top: 10rem;
+    justify-content: center;
+    height: auto;
+}
+
+#skills .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#skills .container .skill-heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#skills .container .skill-heading::before {
+    content: 'skills';
+    position: absolute;
+    left: 2%;
+    top: -20%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #5a24ed2f;
+}
+
+#skills .container .skill-item {
+    display: flex;
+    gap: 15%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .container .skill-item .skill-name {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    font-weight: 500;
+    border: 2px solid black;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+}
+
+#skills .container .skill-item .skill-name:nth-child(1) .score {
+    background-color: red;
+    width: 80%;
+}
+
+#skills .container .skill-item .skill-name:nth-child(2) .score {
+    background-color: #4400ff;
+    width: 65%;
+}
+
+#skills .container .skill-item .skill-name:nth-child(3) .score {
+    background-color: #ffe600;
+    width: 10%;
+}
+
+#skills .container .skill-item .skill-name:nth-child(4) .score {
+    background-color: #48ff00;
+    width: 40%;
+}
+
+#skills .container .skill-item .skill-name span {
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* second skill section */
+
+#skills .container .skill-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#skills .container .skill-main .left {
+    width: calc(50% - 30px);
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+#skills .container .skill-main .right {
+    width: calc(50% - 30px);
+
+}
+
+#skills .container .skill-main .left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: start;
+}
+
+#skills .container .skill-main .left .text-para {
+    text-align: justify;
+    font-family: 'Roboto Mono';
+    letter-spacing: 0.1rem;
+}
+
+#skills .skill-main .right .bar {
+    margin-bottom: 30px;
+}
+
+#skills .skill-main .right .bar .info span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#skills .container .skill-main .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#skills .skill-main .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+#skills .container .skill-main .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+#skills .skill-main .right .html::before {
+    width: 90%;
+    animation: html 2s ease-in-out forwards;
+}
+
+#skills .skill-main .right .css::before {
+    width: 80%;
+    animation: css 2s ease-in-out forwards;
+}
+
+#skills .skill-main .right .javascript::before {
+    width: 50%;
+    animation: javascript 2s ease-in-out forwards;
+}
+
+#skills .skill-main .right .bootstrap::before {
+    width: 60%;
+    animation: bootstrap 2s ease-in-out forwards;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes bootstrap {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+#education {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+    height: auto;
+}
+
+#education .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#education .container .education-heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#education .container .education-heading::before {
+    content: 'education';
+    position: absolute;
+    left: 2%;
+    top: -20%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #5a24ed2f;
+}
+
+#education .container .education-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#education .container .education-part {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 38%; */
+    align-items: center;
+    background-color: slateblue;
+    padding: 4% 0;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* #education .container .education-part:hover {
+
+} */
+
+#education .container .education-part:nth-child(1) .part-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    flex-direction: column;
+    background-color: #6750ff;
+    border-radius: 15px;
+}
+
+#education .container .education-part:nth-child(2) .part-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 90px;
+    flex-direction: column;
+    background-color: #6750ff;
+    border-radius: 15px;
+}
+
+#education .container .education-part:nth-child(3) .part-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 90px;
+    flex-direction: column;
+    background-color: #6750ff;
+    border-radius: 15px;
+}
+
+#education .container .education-part .part-1 i {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+#education .container .education-part .part-1 p {
+    font-size: 2rem;
+    color: #fff;
+}
+
+#education .container .education-part .part-2 {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#education .container .education-part .part-2 h1 {
+    font-size: 2.2rem;
+    padding: 15px 0;
+}
+
+#education .container .education-part .part-2 h2 {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    color: gold;
+}
+
+#education .container .education-part .part-2 h3 {
+    font-size: 1.1rem;
+    color: gold;
+}
+
+#contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+    height: auto;
+}
+
+#contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact .container .contact-heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#contact .container .contact-heading::before {
+    content: 'contact';
+    position: absolute;
+    left: 2%;
+    top: -20%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #5a24ed2f;
+}
+
+#contact .container .contact-main {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    width: 100%;
+}
+
+#contact .container .contact-main .left {
+    width: calc(50% - 30px);
+}
+
+#contact .container .contact-main .right {
+    width: calc(50% - 30px);
+}
+
+#contact .container .contact-main .left .contact-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#contact .container .contact-main .left .contact-data {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-1 #name {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: 1px solid #d88f8f;
+    outline: none;
+    padding: 0px 15px;
+    font-size: 17px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-1 #email {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    outline: none;
+    padding: 0px 15px;
+    border: 1px solid #d88f8f;
+    font-size: 17px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-2 {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-2 #subject {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d88f8f;
+    outline: none;
+    padding: 0px 15px;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-3 {
+    height: 80px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-3 textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-3 #textarea {
+    padding: 10px;
+    resize: none;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d88f8f;
+    outline: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-4 {
+    display: flex;
+    align-items: center;
+}
+
+#contact .container .contact-main .left .contact-data .contact-data-4 button {
+    color: #fff;
+    display: block;
+    background-color: #5a25ed;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #d88f8f;
+    width: 160px;
+}
+
+#contact .container .contact-main .right .contact-details {
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#contact .container .contact-main .right .contact-details .row {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 65px;
+    gap: 4%;
+}
+
+#contact .container .contact-main .right .contact-details .row:nth-child(3) {
+    gap: 2%;
+}
+
+#contact .container .contact-main .right .contact-details .row i {
+    font-size: 25px;
+    display: flex;
+    color: crimson;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .container .contact-main .right .contact-details .row .contact-info {
+    margin-left: 30px;
+}
+
+#contact .container .contact-main .right .contact-details .row .contact-info .head {
+    font-weight: 500;
+}
+
+#contact .container .contact-main .right .contact-details .row .contact-info .tail {
+    color: #5a25ed;
+}
+
+@media screen and (min-width: 836px) and (max-width: 1024px) {
+    nav .menu .menu-item {
+        font-size: 1.3rem;
+        font-family: system-ui;
+        margin-right: 15px;
+        font-weight: 400;
+        color: #0c133f;
+    }
+
+    #hero .container .left .subheading {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        overflow: hidden;
+        opacity: 0;
+        animation: text 3s ease-in-out forwards;
+        color: #5924ed;
+        animation-delay: 1s;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    #hero .container .left .heading {
+        font-size: 3rem;
+        font-weight: 900;
+        display: inline-block;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(1) {
+        color: #000;
+        font-size: 3rem;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(2) {
+        color: red;
+        font-size: 3.5rem;
+    }
+
+    #hero .container .left .desc {
+        max-width: 500px;
+        font-size: 1.2rem;
+        animation: text 1s ease-in-out forwards;
+        color: #55555a;
+        opacity: 0;
+        animation-delay: 3s;
+    }
+
+    #hero .container .right img {
+        width: 100%;
+        height: 550px;
+        max-width: 500px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 12px;
+        /* margin-left: 15px; */
+    }
+
+    #hero .container .right {
+        flex: 6;
+    }
+}
+
+@media screen and (min-width: 723px) and (max-width: 835px) {
+    nav .menu .menu-item {
+        font-size: 1rem;
+        font-family: system-ui;
+        margin-right: 15px;
+        font-weight: 400;
+        color: #0c133f;
+    }
+
+    #hero .container .right {
+        flex: 6;
+    }
+
+    #hero .container .left .subheading {
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        overflow: hidden;
+        opacity: 0;
+        animation: text 3s ease-in-out forwards;
+        color: #5924ed;
+        animation-delay: 1s;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    #hero .container .left .heading {
+        font-size: 2rem;
+        font-weight: 900;
+        display: inline-block;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(1) {
+        color: #000;
+        font-size: 3rem;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(2) {
+        color: red;
+        font-size: 3.5rem;
+    }
+
+    #hero .container .left .desc {
+        max-width: 500px;
+        font-size: 1.1rem;
+        animation: text 1s ease-in-out forwards;
+        color: #55555a;
+        opacity: 0;
+        animation-delay: 3s;
+    }
+
+    #hero .container .right img {
+        width: 100%;
+        height: 500px;
+        max-width: 500px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 12px;
+        /* margin-left: 15px; */
+    }
+
+    #hero .container .left .button .primary-btn {
+        display: inline-block;
+        padding: 0.6em 1.1em;
+        background-color: #5924ed;
+        color: #fff;
+        border-radius: 50px;
+        font-size: 1rem;
+    }
+
+    #hero .container .left .button .fa-solid {
+        font-size: 2.3rem;
+        color: #5924ed;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav .logo {
+        margin-left: 13px;
+    }
+
+    nav .logo img {
+        height: 60px;
+        margin-left: 0;
+    }
+
+    nav .menu .menu-item {
+        font-size: 0.7rem;
+        margin-right: 5px;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+    }
+
+    nav .menu .menu-item:hover {
+        font-size: 1.01rem;
+    }
+
+    #hero {
+        padding-top: 5rem;
+        overflow: hidden;
+        /* height: 0vh; */
+    }
+
+    #hero .container {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    #hero .container .right img {
+        height: 340px;
+    }
+
+    #hero .container .left .subheading {
+        font-size: 1rem;
+    }
+
+    #hero .container .left .heading {
+        font-size: 2.1rem;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    #hero .container .left .desc {
+        font-size: 1rem;
+    }
+
+    #hero .container .left .button {
+        margin-top: 1.7rem;
+    }
+
+    #hero .container .left .button .primary-btn {
+        padding: 0.5em 0.5em;
+        font-size: 1.1rem;
+    }
+
+    #skills {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    #skills .container .skill-heading {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    #skills .container .skill-main .left .text {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    #skills .container .skill-main .left .text-para {
+        font-size: 13px;
+        letter-spacing: normal;
+    }
+
+    #skills .skill-main .right .bar .info span {
+        font-size: 13px;
+    }
+
+    #education {
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    #education .container .education-heading {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    #education .container .education-part {
+        transition: all 2s;
+        justify-content: unset;
+        width: 108px;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 {
+        padding: 15px;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 {
+        padding: 36px;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 {
+        padding: 37px;
+    }
+
+    #education .container .education-part .part-1 {
+        transition: all 2s;
+        background: none !important;
+    }
+
+    #education .container .education-part:hover {
+        background-color: crimson;
+        width: 100%;
+    }
+
+    #education .container .education-part:hover .part-2 {
+        opacity: 1;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 p {
+        font-size: 1rem;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 p {
+        font-size: 1rem;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 p {
+        font-size: 1rem;
+    }
+
+    #education .container .education-part .part-2 {
+        opacity: 0;
+    }
+
+    #education .container .education-part .part-2 h1 {
+        font-size: 1rem;
+    }
+
+    #education .container .education-part .part-2 h2 {
+        font-size: 0.9rem;
+    }
+
+    #education .container .education-part .part-2 h3 {
+        font-size: 0.7rem;
+    }
+
+    #contact {
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #contact .container .contact-heading {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    #contact .container .contact-main .left .contact-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 {
+        justify-content: space-between;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #name {
+        font-size: 10px;
+        padding: 0;
+        height: 35px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #email {
+        font-size: 10px;
+        padding: 0;
+        height: 35px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 {
+        height: 35px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 #subject {
+        font-size: 10px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-3 {
+        height: 75px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-3 #textarea {
+        font-size: 10px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-4 button {
+        height: 37px;
+        font-size: 15px;
+        width: 128px;
+    }
+
+    #contact .container .contact-main .right .contact-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .right .contact-details .row .contact-info h2,
+    h3 {
+        font-size: 1rem;
+    }
+
+    #contact .container .contact-main .right .contact-details .row .contact-info #ovfl {
+        color: #48ff00;
+        content: br;
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+    nav {
+        padding: 7px;
+    }
+
+    nav .logo {
+        margin-left: 14px;
+    }
+
+    nav .logo img {
+        height: 70px;
+        margin-left: 0;
+    }
+
+    nav .menu .menu-item {
+        font-size: 0.72rem;
+        margin-right: 6px;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+    }
+
+    nav .menu .menu-item:hover {
+        font-size: 1rem;
+    }
+
+    #hero {
+        padding-top: 6rem;
+        overflow: hidden;
+    }
+
+    #hero .container {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    #hero .container .right img {
+        height: 365px;
+    }
+
+    #hero .container .left .subheading {
+        font-size: 1.2rem;
+    }
+
+    #hero .container .left .heading {
+        font-size: 2.2rem;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(1) {
+        font-size: 2.1rem;
+    }
+
+    #hero .container .left .desc {
+        font-size: 1.039rem;
+    }
+
+    #hero .container .left .button {
+        margin-top: 1.7rem;
+    }
+
+    #hero .container .left .button .primary-btn {
+        padding: 0.6em 0.6em;
+        font-size: 1.1rem;
+    }
+
+    #skills {
+        padding-top: 2.3rem;
+        margin-bottom: 0;
+    }
+
+    #skills .container .skill-heading {
+        font-size: 2.3rem;
+        margin-bottom: 2.4rem;
+    }
+
+    #skills .container .skill-main .left .text {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    #skills .container .skill-main .left .text-para {
+        font-size: 0.9rem;
+        letter-spacing: normal;
+    }
+
+    #skills .skill-main .right .bar .info span {
+        font-size: 14px;
+    }
+
+    #education {
+        padding-top: 2.3rem;
+        margin-bottom: 0;
+    }
+
+    #education .container .education-heading {
+        font-size: 2.3rem;
+        margin-bottom: 2.4rem;
+    }
+
+    #education .container .education-part {
+        transition: all 2s;
+        justify-content: unset;
+        width: 150px;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 {
+        padding: 35px;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 {
+        padding: 58px;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 {
+        padding: 58px;
+    }
+
+    #education .container .education-part .part-1 {
+        transition: all 2s;
+        background: none !important;
+    }
+
+    #education .container .education-part:hover {
+        background-color: crimson;
+        width: 100%;
+        height: 100%;
+    }
+
+    #education .container .education-part:hover .part-2 {
+        opacity: 1;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 p {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 p {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 p {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part .part-2 {
+        opacity: 0;
+    }
+
+    #education .container .education-part .part-2 h1 {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part .part-2 h2 {
+        font-size: 0.99rem;
+    }
+
+    #education .container .education-part .part-2 h3 {
+        font-size: 0.79rem;
+    }
+
+    #contact {
+        padding-top: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    #contact .container .contact-heading {
+        font-size: 2.3rem;
+        margin-bottom: 2.4rem;
+    }
+
+    #contact .container .contact-main .left .contact-text {
+        font-size: 1.099rem;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 {
+        justify-content: space-between;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #name {
+        font-size: 13px;
+        padding: 0;
+        height: 40px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #email {
+        font-size: 13px;
+        padding: 0;
+        height: 40px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 {
+        height: 40px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 #subject {
+        font-size: 13px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-3 #textarea {
+        font-size: 13px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-4 button {
+        height: 40px;
+        font-size: 16px;
+        width: 135px;
+    }
+
+    #contact .container .contact-main .right .contact-text {
+        font-size: 1.199rem;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .right .contact-details .row .contact-info h2,
+    h3 {
+        font-size: 1.099rem;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px) {
+    nav {
+        padding: 8px;
+    }
+
+    nav .logo {
+        margin-left: 15px;
+    }
+
+    nav .logo img {
+        height: 73px;
+        margin-left: 0;
+    }
+
+    nav .menu .menu-item {
+        font-size: 0.78rem;
+        font-family:'Courier New', Courier, monospace;
+        margin-right: 7px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    nav .menu .menu-item:hover {
+        font-size: 1.1rem;
+    }
+
+    #hero {
+        padding-top: 6.5rem;
+        overflow: hidden;
+    }
+
+    #hero .container {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    #hero .container .right img {
+        height: 410px;
+    }
+
+    #hero .container .left .subheading {
+        font-size: 1.4rem;
+    }
+
+    #hero .container .left .heading {
+        font-size: 2.3rem;
+    }
+
+    #hero .container .left .heading .wrapper:nth-child(1) {
+        font-size: 2.2rem;
+    }
+
+    #hero .container .left .desc {
+        font-size: 1.18rem;
+    }
+
+    #hero .container .left .button {
+        margin-top: 1.7rem;
+    }
+
+    #hero .container .left .button .primary-btn {
+        padding: 0.7em 0.7em;
+        font-size: 1.2rem;
+    }
+
+    #skills {
+        padding-top: 2.7rem;
+        margin-bottom: 0;
+    }
+
+    #skills .container .skill-heading {
+        font-size: 2.45rem;
+        margin-bottom: 2.6rem;
+    }
+
+    #skills .container .skill-main .left .text {
+        font-size: 1.25rem;
+        margin-bottom: 35px;
+    }
+
+    #skills .container .skill-main .left .text-para {
+        font-size: 1.2rem;
+        letter-spacing: normal;
+    }
+
+    #skills .skill-main .right .bar .info span {
+        font-size: 15px;
+    }
+
+    #education {
+        padding-top: 2.7rem;
+        margin-bottom: 0;
+    }
+
+    #education .container .education-heading {
+        font-size: 2.45rem;
+        margin-bottom: 2.6rem;
+    }
+
+    #education .container .education-part {
+        transition: all 2s;
+        justify-content: unset;
+        width: 198px;
+        height: 285px;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 {
+        padding-left: 41px;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 {
+        padding-left: 50px;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 {
+        padding-left: 50px;
+    }
+
+    #education .container .education-part .part-1 {
+        transition: all 2s;
+        background: none !important;
+    }
+
+    #education .container .education-part:hover {
+        background: crimson;
+        width: 100%;
+        height: 100%;
+    }
+
+    #education .container .education-part:hover .part-2 {
+        opacity: 1;
+    }
+
+    #education .container .education-part:nth-child(1) .part-1 p {
+        font-size: 1.4rem;
+    }
+
+    #education .container .education-part:nth-child(2) .part-1 p {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part:nth-child(3) .part-1 p {
+        font-size: 1.099rem;
+    }
+
+    #education .container .education-part .part-2 {
+        opacity: 0;
+    }
+
+    #education .container .education-part .part-2 h1 {
+        font-size: 1.4rem;
+    }
+
+    #education .container .education-part .part-2 h2 {
+        font-size: 1.3rem;
+    }
+
+    #education .container .education-part .part-2 h3 {
+        font-size: 1.2rem;
+    }
+
+    #contact {
+        padding-top: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    #contact .container .contact-heading {
+        font-size: 2.45rem;
+        margin-bottom: 2.6rem;
+    }
+
+    #contact .container .contact-main .left .contact-text {
+        font-size: 1.4rem;
+        margin-bottom: 13px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 {
+        justify-content: space-between;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #name {
+        font-size: 16px;
+        padding: 0;
+        height: 43px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-1 #email {
+        font-size: 16px;
+        padding: 0;
+        height: 43px;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 {
+        height: 43px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-2 #subject {
+        font-size: 16px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-3 #textarea {
+        font-size: 16px;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-4 {
+        justify-content: center;
+    }
+
+    #contact .container .contact-main .left .contact-data .contact-data-4 button {
+        height: 43px;
+        font-size: 17px;
+        width: 145px;
+    }
+
+    #contact .container .contact-main .right .contact-text {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #contact .container .contact-main .right .contact-details .row .contact-info h2,
+    h3 {
+        font-size: 1.3rem;
+    }
+
+}
